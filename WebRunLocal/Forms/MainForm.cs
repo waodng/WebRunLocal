@@ -23,7 +23,8 @@ namespace WebRunLocal
             string appName = pathSplitArray[pathSplitArray.Length - 1].Split('.')[0];
             IcnTray.Visible = true;
             IcnTray.Icon = Properties.Resources.logo;
-            IcnTray.Text = appName;
+            //IcnTray.Text = appName;
+            IcnTray.Text = WebRunLocal.Properties.Settings.Default.appName;
 
             //设置主面板属性
             Icon = Properties.Resources.logo;
@@ -34,6 +35,7 @@ namespace WebRunLocal
             //设置折叠面板按钮绑定的窗体
             buttonSetting.Tag = new SettingForm();
             buttonAbout.Tag = new AboutForm();
+            btnPrinter.Tag = new PrinterForm();
             FoldButtonClick(buttonSetting, e);
 
             //启动WRL服务并进行系统初始化

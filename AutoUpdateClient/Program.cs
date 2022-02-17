@@ -11,8 +11,8 @@ namespace AutoUpdateClient
         [STAThread]
         static void Main()
         {
-
-            using (System.Threading.Mutex m = new System.Threading.Mutex(true, Application.ProductName, out bool createNew))
+            bool createNew = false;
+            using (System.Threading.Mutex m = new System.Threading.Mutex(true, Application.ProductName, out createNew))
             {
                 if (createNew)
                 {

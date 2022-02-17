@@ -14,7 +14,7 @@ namespace WebRunLocal.Controllers
     /// 上海医保五期动态库
     /// </summary>
     [RoutePrefix("api/shanghaiyb")]
-    public class ShangHaiYbController : ApiController
+    public class ShangHaiYbController : BaseApiController
     {
 
         [DllImport(@"SendRcv4.dll", EntryPoint = "SendRcv4")]
@@ -22,7 +22,6 @@ namespace WebRunLocal.Controllers
 
         [Route("send")]
         [HttpPost]
-        [ActionFilter]
         public HttpResponseMessage SendRcv4([FromBody]object message)
         {
             byte[] startParamsBuf = Encoding.Default.GetBytes("12345678");
@@ -54,11 +53,11 @@ namespace WebRunLocal.Controllers
             {
                 LoggerHelper.WriteLog("调用上海医保动态库异常", e);
 
-                JObject jObject = new JObject
+                JObject jObject = JObject.FromObject(new
                 {
-                    ["xxfhm"] = "500",
-                    ["fhxx"] = "调用医保动态库失败,原因:" + e.Message
-                };
+                    xxfhm = "500",
+                    fhxx = "调用医保动态库失败,原因:" + e.Message
+                });
 
                 result = jObject.ToString();
             }

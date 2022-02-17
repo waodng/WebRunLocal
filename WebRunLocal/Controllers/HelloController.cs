@@ -9,19 +9,24 @@ namespace WebRunLocal.Controllers
     ///  Hello controller.
     /// </summary>
     [RoutePrefix("api/hello")]
-    public class HelloController : ApiController
+    public class HelloController : BaseApiController
     {
         [Route("getecho")]
         [HttpGet]
-        [ActionFilter]
+        [NoActionFilter]//外界依然可以访问，Action过滤器不执行
         public IHttpActionResult GetEcho(string name)
         {
-            return Json(new {Name = name, Message = $"Hello, {name}"});
+            return Json(new { Name = name, Message = string.Format("Hello, {0}", name) });
         }
 
-        [Route("postecho")]
+        [HttpGet]
+        [NonAction]//外界无法访问，但内部可调用
+        public IHttpActionResult Helloworld()                               
+        {
+            return Json(new { Name = "测试", Message = "Hello, world！" });
+        }
+
         [HttpPost]
-        [ActionFilter]
         public HttpResponseMessage SendMessage([FromBody]object message)
         {
             HttpResponseMessage resonse = new HttpResponseMessage

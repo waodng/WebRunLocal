@@ -28,9 +28,8 @@ namespace WebRunLocal.Services
         {
             this.Port = port;
 
-            var config = new HttpSelfHostConfiguration($"http://0.0.0.0:{this.Port}");
+            var config = new HttpSelfHostConfiguration(string.Format("http://0.0.0.0:{0}", this.Port));
 
-            config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute("DefaultApi", "api/{controller}/{action}");
 
             _server = new HttpSelfHostServer(config);
@@ -61,7 +60,10 @@ namespace WebRunLocal.Services
         /// </summary>
         public void Dispose()
         {
-            _server?.Dispose();
+            if (_server != null)
+            {
+                _server.Dispose();
+            }
         }
     }
 }

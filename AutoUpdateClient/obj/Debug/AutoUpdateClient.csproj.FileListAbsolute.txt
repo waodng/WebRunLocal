@@ -11,3 +11,14 @@ E:\MySpace\GitHub\WebRunLocal\AutoUpdate\obj\Debug\AutoUpdateClient.csproj.CoreC
 E:\MySpace\GitHub\WebRunLocal\AutoUpdate\obj\Debug\AutoUpdateClient.csproj.CopyComplete
 E:\MySpace\GitHub\WebRunLocal\AutoUpdate\obj\Debug\WRL自动更新.exe
 E:\MySpace\GitHub\WebRunLocal\AutoUpdate\obj\Debug\WRL自动更新.pdb
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\bin\Debug\WRL自动更新.exe.config
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\bin\Debug\WRL自动更新.exe
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\bin\Debug\WRL自动更新.pdb
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\bin\Debug\SharpCompress.dll
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\bin\Debug\SuperSocket.ClientEngine.dll
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\bin\Debug\WebSocket4Net.dll
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\AutoUpdateClient.Form1.resources
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\AutoUpdateClient.Properties.Resources.resources
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\AutoUpdateClient.csproj.GenerateResource.Cache
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\WRL自动更新.exe
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\WRL自动更新.pdb

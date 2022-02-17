@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using WebRunLocal.Properties;
 
 namespace WebRunLocal.Utils
 {
@@ -105,13 +106,13 @@ namespace WebRunLocal.Utils
             //桌面目录
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
             //获取程序完整路径
-            string appAllPath = Process.GetCurrentProcess().MainModule.FileName;
+            string appAllPath = Process.GetCurrentProcess().MainModule.FileName.Replace(".vshost","");
 
             List<string> shortcutPaths = GetQuickFromFolder(desktopPath, appAllPath);
             //如果没有则创建
             if (shortcutPaths.Count < 1)
             {
-                CreateShortcut(desktopPath, "WRL", appAllPath);
+                CreateShortcut(desktopPath, Settings.Default.appName, appAllPath);
             }
         }
     }

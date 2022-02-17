@@ -10,6 +10,7 @@ namespace WebRunLocal.Filters
 {
     public class ActionFilter : ActionFilterAttribute
     {
+        public bool IsCheck { get; set; }
 
         /// <summary>
         /// 执行请求方法体之前的事件
@@ -17,9 +18,16 @@ namespace WebRunLocal.Filters
         /// <param name="actionContext"></param>
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
+            var actionFilters = actionContext.ActionDescriptor.GetCustomAttributes<NoActionFilterAttribute>();
+            var controllerFilters = actionContext.ActionDescriptor.GetCustomAttributes<NoActionFilterAttribute>();
+            if (actionFilters.Count > 0 | controllerFilters.Count > 0)
+            {
+                return;
+            }
+
             bool pramaterLoggerPrint = bool.Parse(ConfigurationManager.AppSettings["PramaterLoggerPrint"]);
-            
-            if (pramaterLoggerPrint) 
+
+            if (pramaterLoggerPrint)
             {
                 Stopwatch stopWatch = new Stopwatch();
                 actionContext.Request.Properties["action"] = stopWatch;
@@ -28,7 +36,7 @@ namespace WebRunLocal.Filters
                 string controllerName = actionContext.ActionDescriptor.ControllerDescriptor.ControllerName;
                 string actionName = actionContext.ActionDescriptor.ActionName;
                 string requestParameter = JsonConvert.SerializeObject(actionContext.ActionArguments);
-                LoggerHelper.WriteLog(string.Format("{0}.{1}{2}入参:{3}", controllerName, actionName, Environment.NewLine,requestParameter));
+                LoggerHelper.WriteLog(string.Format("{0}.{1}{2}入参:{3}", controllerName, actionName, Environment.NewLine, requestParameter));
             }
         }
 
@@ -39,8 +47,15 @@ namespace WebRunLocal.Filters
         /// <param name="actionExecutedContext"></param>
         public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
         {
+            var actionFilters = actionExecutedContext.ActionContext.ActionDescriptor.GetCustomAttributes<NoActionFilterAttribute>();
+            var controllerFilters = actionExecutedContext.ActionContext.ActionDescriptor.GetCustomAttributes<NoActionFilterAttribute>();
+            if (actionFilters.Count > 0 | controllerFilters.Count > 0)
+            {
+                return;
+            }
+
             bool pramaterLoggerPrint = bool.Parse(ConfigurationManager.AppSettings["PramaterLoggerPrint"]);
-            if (pramaterLoggerPrint) 
+            if (pramaterLoggerPrint)
             {
                 Stopwatch stopWatch = actionExecutedContext.Request.Properties["action"] as Stopwatch;
                 stopWatch.Stop();
@@ -51,9 +66,6 @@ namespace WebRunLocal.Filters
 
                 LoggerHelper.WriteLog(string.Format("{0}.{1}{2}出参:{3}", controllerName, actionName, Environment.NewLine, responseResult));
             }
-
         }
-
-
     }
 }
