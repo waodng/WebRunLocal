@@ -7,17 +7,11 @@ E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\Newtonsoft.Json.dll
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\System.Net.Http.Formatting.dll
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\System.Web.Http.dll
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\System.Web.Http.SelfHost.dll
-E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\WRL自动更新.exe
-E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\WebSocket4Net.dll
-E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\SharpCompress.dll
-E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\SuperSocket.ClientEngine.dll
-E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\WRL自动更新.pdb
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\log4net.xml
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\Newtonsoft.Json.xml
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\System.Net.Http.Formatting.xml
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\System.Web.Http.xml
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\System.Web.Http.SelfHost.xml
-E:\OpenSource\WebRunLocal-master\WebRunLocal\obj\Debug\WebRunLocal.csprojResolveAssemblyReference.cache
 E:\OpenSource\WebRunLocal-master\WebRunLocal\obj\Debug\Interop.IWshRuntimeLibrary.dll
 E:\OpenSource\WebRunLocal-master\WebRunLocal\obj\Debug\Interop.NetFwTypeLib.dll
 E:\OpenSource\WebRunLocal-master\WebRunLocal\obj\Debug\WebRunLocal.csproj.ResolveComReference.cache
@@ -33,3 +27,9 @@ E:\OpenSource\WebRunLocal-master\WebRunLocal\obj\Debug\WebRunLocal.Forms.Printer
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\zxing.dll
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\zxing.pdb
 E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\zxing.xml
+E:\OpenSource\WebRunLocal-master\WebRunLocal\obj\Debug\WebRunLocal.csprojResolveAssemblyReference.cache
+E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\WRL自动更新.exe
+E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\WebSocket4Net.dll
+E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\SharpCompress.dll
+E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\SuperSocket.ClientEngine.dll
+E:\OpenSource\WebRunLocal-master\WebRunLocal\bin\Debug\WRL自动更新.pdb

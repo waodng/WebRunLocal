@@ -239,5 +239,11 @@
     <Content Include="lib\zxing.pdb" />
     <Content Include="lib\zxing.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoUpdateClient\AutoUpdateClient.csproj">
+      <Project>{980bdfeb-4335-4c98-bf23-cfe926d52be4}</Project>
+      <Name>AutoUpdateClient</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
