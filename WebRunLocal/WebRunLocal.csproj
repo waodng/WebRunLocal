@@ -213,12 +213,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AutoUpdateClient\AutoUpdateClient.csproj">
-      <Project>{980bdfeb-4335-4c98-bf23-cfe926d52be4}</Project>
-      <Name>AutoUpdateClient</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
