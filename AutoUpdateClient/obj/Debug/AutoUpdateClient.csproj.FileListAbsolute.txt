@@ -22,3 +22,4 @@ E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\AutoUpdateClient.Pro
 E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\AutoUpdateClient.csproj.GenerateResource.Cache
 E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\WRL自动更新.exe
 E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\WRL自动更新.pdb
+E:\OpenSource\WebRunLocal-master\AutoUpdateClient\obj\Debug\AutoUpdateClient.csprojResolveAssemblyReference.cache
